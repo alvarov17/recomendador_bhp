@@ -10,6 +10,16 @@ const useStyles = makeStyles((theme) => ({
   grid: { padding: theme.spacing(1) },
 }));
 
+const nombreMolinos = (nombre) => {
+  if (nombre === 'SAG 16') {
+    return 'MOLINO 1';
+  } if (nombre === 'SAG 17') {
+    return 'MOLINO 2';
+  } if (nombre === 'RECUPERACIÓN') {
+    return 'MOLINO 3';
+  }
+};
+
 const Grafico = ({
   data, nombre, varName, name,
 }) => {
@@ -19,7 +29,7 @@ const Grafico = ({
       <Grid item xs={12}>
         <Paper>
           <Typography variant="h6" style={{ textAlign: 'center' }}>
-            {`${name}`}
+            {nombreMolinos(varName)}
           </Typography>
           <ResponsiveContainer height={190}>
             <LineChart

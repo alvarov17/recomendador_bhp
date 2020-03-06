@@ -34,7 +34,6 @@ const GraficoBuilder = () => {
             </Grid>
           ) : (
             <Grafico
-              name="GRAFICO 1"
               data={graphSag.dataset}
               nombre={graphSag.nombre}
               varName={graphSag.varName}
@@ -45,7 +44,6 @@ const GraficoBuilder = () => {
             <></>
           ) : (
             <Grafico
-              name="GRAFICO 2"
               data={graphRecom.recom}
               nombre={graphRecom.nombre}
               varName={graphRecom.varName}
