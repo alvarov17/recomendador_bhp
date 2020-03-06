@@ -4,6 +4,7 @@ import {
 } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import RecomendacionBuilder from './RecomendacionBuilder';
+import nombreConvert from '../../../utils/nombreConvert';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,7 @@ const Recomendaciones = () => {
             <Typography variant="body1">
               Recomendaciones para
               {' '}
-              {varName}
+              {nombreConvert(varName)}
             </Typography>
           ) : ''}
           <Divider />
